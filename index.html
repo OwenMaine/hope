@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Plastics Co Inc. | Precision Plastic Manufacturing</title>
+    <meta name="description" content="Hope Plastics Co Inc specializes in custom plastic solutions for commercial and industrial applications, with a reputation for precision, creative engineering, and West Coast reliability.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header x-data="{ scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
+        <nav :class="{ 'scrolled': scrolled }">
+            <div class="logo">
+                <a href="#">HOPE PLASTICS</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About Us</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#industries">Industries</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger" x-data="{ open: false }" @click="open = !open">
+                <i class="fas" :class="open ? 'fa-times' : 'fa-bars'"></i>
+                <div class="mobile-menu" x-show="open" @click.away="open = false">
+                    <a href="#about" @click="open = false">About Us</a>
+                    <a href="#capabilities" @click="open = false">Capabilities</a>
+                    <a href="#industries" @click="open = false">Industries</a>
+                    <a href="#process" @click="open = false">Process</a>
+                    <a href="#contact" @click="open = false">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content" data-aos="fade-in">
+                <h1>Precision Plastic Manufacturing</h1>
+                <h2>Crafted in California. Trusted Everywhere.</h2>
+                <div class="scroll-cta">
+                    <p>Scroll to Explore</p>
+                    <span>&#x2193;</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-image" data-aos="fade-right">
+                <img src="images/24.jpg" alt="Inside the Hope Plastics Co Inc factory">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h3>Who We Are</h3>
+                <p>
+                    Founded on the principle of innovation, Hope Plastics Co Inc. is a leader in custom plastic solutions. Our mission combines <strong>California-built</strong> quality with a deep commitment to <strong>sustainability</strong> and manufacturing <strong>accuracy</strong>. We partner with you to turn ambitious ideas into tangible, high-quality products.
+                </p>
+            </div>
+        </section>
+
+        <section id="capabilities" class="capabilities-section">
+            <h3 data-aos="fade-up">Capabilities at a Glance</h3>
+            <div class="capabilities-grid">
+                <div class="capability-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Injection Molding</h4>
+                </div>
+                <div class="capability-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-fire"></i>
+                    <h4>Thermoforming</h4>
+                </div>
+                <div class="capability-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-robot"></i>
+                    <h4>CNC Machining</h4>
+                </div>
+                <div class="capability-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h4>Custom Design Support</h4>
+                </div>
+                <div class="capability-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Rapid Prototyping</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="industries" class="industries-section">
+            <h3 data-aos="fade-up">Industries Served</h3>
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-scroll">
+                    <div class="industry-card">
+                        <img src="images/23.jpg" alt="Medical industry application">
+                        <div class="card-content">
+                            <i class="fas fa-heartbeat"></i>
+                            <h5>Medical</h5>
+                            <p>Sterile and precision components.</p>
+                        </div>
+                    </div>
+                    <div class="industry-card">
+                        <img src="images/3.jpg" alt="Retail packaging">
+                        <div class="card-content">
+                            <i class="fas fa-box-open"></i>
+                            <h5>Retail Packaging</h5>
+                            <p>Durable and aesthetic solutions.</p>
+                        </div>
+                    </div>
+                    <div class="industry-card">
+                        <img src="images/4.jpg" alt="Automotive parts">
+                        <div class="card-content">
+                            <i class="fas fa-car"></i>
+                            <h5>Automotive</h5>
+                            <p>High-performance parts.</p>
+                        </div>
+                    </div>
+                    <div class="industry-card">
+                        <img src="images/5.jpg" alt="Electronics casing">
+                        <div class="card-content">
+                            <i class="fas fa-microchip"></i>
+                            <h5>Electronics</h5>
+                            <p>Custom enclosures and housing.</p>
+                        </div>
+                    </div>
+                     <div class="industry-card">
+                        <img src="images/6.jpg" alt="Industrial components">
+                        <div class="card-content">
+                            <i class="fas fa-industry"></i>
+                            <h5>Industrial Components</h5>
+                            <p>Reliable parts for any machinery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process-section">
+            <h3 data-aos="fade-up">Our Process</h3>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4>Step 1: Concept</h4>
+                        <p>We start with your vision, exploring the possibilities and defining goals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h4>Step 2: Design & Specs</h4>
+                        <p>Our engineers translate your concept into precise technical specifications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4>Step 3: Prototype</h4>
+                        <p>We create a functional prototype for testing and validation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h4>Step 4: Production</h4>
+                        <p>Full-scale, high-quality manufacturing begins in our California facility.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4>Step 5: Delivery</h4>
+                        <p>Your finished products are delivered on time, every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sustainability-section">
+            <div class="sustainability-content" data-aos="zoom-in">
+                <h3>Our Commitment to a Cleaner Process</h3>
+                <div class="badges">
+                    <div class="badge">
+                        <i class="fas fa-recycle"></i>
+                        <p>Waste-Reduced Processes</p>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Locally Sourced Materials</p>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-shipping-fast"></i>
+                        <p>Eco-Conscious Shipping</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials" class="testimonials-section">
+            <h3 data-aos="fade-up">What Our Partners Say</h3>
+            <div class="testimonial-carousel" x-data="{ active: 0, testimonials: [
+                    { name: 'J. Davis', company: 'Innovatech', quote: 'The precision and speed from Hope Plastics is unmatched. They are a true partner.' },
+                    { name: 'M. Chen', company: 'AutoCore', quote: 'Their creative engineering solved a complex problem for us. West Coast reliability at its finest.' },
+                    { name: 'S. Patel', company: 'MedSupply', quote: 'For medical-grade components, there is no one else we trust. Quality is everything.' }
+                ]}">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                    <div class="testimonial-slide" x-show="active === index" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+                        <p class="quote">"<span x-text="testimonial.quote"></span>"</p>
+                        <p class="author">- <span x-text="testimonial.name"></span>, <span x-text="testimonial.company"></span></p>
+                    </div>
+                </template>
+
+                <div class="carousel-nav">
+                    <button @click="active = (active === 0) ? testimonials.length - 1 : active - 1">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button @click="active = (active === testimonials.length - 1) ? 0 : active + 1">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="contact-section">
+            <div class="contact-content">
+                <h3 data-aos="fade-up">Let’s Build Better Plastic Solutions Together.</h3>
+                <p data-aos="fade-up" data-aos-delay="100">Ready to start your next project? We are too.</p>
+                <div class="contact-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="mailto:contact@hopeplasticsco.com" class="btn btn-primary">Email Us</a>
+                    <a href="mailto:contact@hopeplasticsco.com?subject=Request for Quote" class="btn btn-secondary">Request a Quote</a>
+                </div>
+                <div class="contact-details" data-aos="fade-up" data-aos-delay="300">
+                     <p><i class="fas fa-map-marker-alt"></i> 5353 Strohm Ave, North Hollywood, CA 91601</p>
+                    <p><i class="fas fa-envelope"></i> contact@hopeplasticsco.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Hope Plastics Co Inc. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
